@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Log in</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta name="viewport" content="width=device-wid th">
+    <meta charset="utf-8">
+    <link href="/css/styles+header.css" rel="stylesheet">
+    <link href="/css/sltyles+register-login.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e3500cfe31.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <%- include('../partials/header')%>
+    <main>
+        <h2>Inicia sesion</h2>
+        <section id="formulario">
+            <form action="/login" method="POST">
+                <div class="form">
+                    <label for="email"></label>
+                    <input type="email" name="email" id="email" placeholder="Email">
+                    <div id = "errorEmail" class="containerError"></div>
+                    <% if (locals.errors && errors.email){ %>
+                        <div class="mensajeError">
+                            <%= errors.email.msg %>
+                        </div>
+                    <% } %>
+                </div>
+                <div class="form">
+                    <label for="password"></label>
+                    <input type="password" name="password" id="password" placeholder="Contraseña">
+                    <div id = "errorPassword" class="containerError"></div>
+                    <% if (locals.errors && errors.password){ %>
+                        <div class="mensajeError">
+                            <%= errors.password.msg %>
+                        </div>
+                    <% } %>
+                </div>
+                <div>
+                    <button type="submit">Iniciar sesion</button>
+                </div>
+            </form>
+            <p>
+                No tenes cuenta? <a href="/register">Registrate</a>
+            </p>
+        </section>
+    </main>
+    <%- include('../partials/footer')%>
+    <script src= "js/login.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

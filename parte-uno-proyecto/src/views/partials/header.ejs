@@ -1,0 +1,75 @@
+<header class="main-header">
+  <div>
+    <a href="/"><img src="/images/infiniticars.png" class="logo" /></a>
+  </div>
+  <div class="seccion-barra2">
+    <% if( locals.userLogged==null){%> <a> </a> <% }else if
+    (locals.userLogged.state== 9 || locals.userLogged.rol== 9) { %>
+    <a href="/administrar">Admin</a>
+    <% } %> 
+
+    <a href="/nosotros">Nosotros</a>
+    <a href="/productos/1">Catálogo</a>
+  </div>
+  <div class="seccion-barra2">
+    <a href="/agregar">Vende tu auto</a>
+    <% if (locals.isLogged) { %>
+    <a class="sesion" class="fa-solid fa-basket-shopping" href="/shop-cart"
+      >Carrito</a
+    >
+    <a href="/profile" class="miniatura"
+      >
+      <div>
+      <img
+        src="/images/usuarios/<%= locals.userLogged.image %>"
+        style="border-radius: 50%; width: 2.5rem; height: 2.5rem"
+        alt="Foto"
+      />
+    </div>
+    <div>
+      <%= locals.userLogged.user %>
+    </a>
+  </div>
+    <a class="sesion" href="/profile">Mi perfil</a>
+    <a class="sesion" href="/logout">Cerrar sesion</a>
+    <% } else { %>
+    <a class="sesion2" href="/register">Registrate</a>
+    <a class="sesion2" href="/login">Inicia sesion</a>
+    <% } %>
+  </div>
+
+
+
+
+  
+  <div id="menu-hamb" >
+    <ul type = "none">
+      <li><a href="/">Home</a></li>
+      <% if( locals.userLogged==null){%> <a> </a> <% }else if
+    (locals.userLogged.state== 9 || locals.userLogged.rol== 9) { %>
+    <li><a href="/administrar">Admin</a></li>
+    <% } %> 
+      <li><a href="/nosotros">Nosotros</a></li>
+      <li><a href="/productos/1">Catálogo</a></li>
+      <li><a href="/agregar">Vende tu auto</a></li>
+      <% if (locals.isLogged) { %>
+      <li><a class="shop-left" class="fa-solid fa-basket-shopping" href="/shop-cart">Carrito</a></li>
+        <%= locals.userLogged.user %>
+      <li><a href="/profile">Mi perfil</a></li>
+      <li><a href="/logout">Cerrar sesion</a></li>
+        <% } else { %>
+      <li><a href="/register">Registrate</a></li>
+      <li><a href="/login">Inicia sesion</a></li>
+      <% } %>
+    </ul>
+  </div>
+
+
+
+
+  <a href="#" class="burger-menu"><i class="fas fa-bars"></i></a>
+  <script src= "js/menuBurger.js"></script>
+</header>
+<span id="busqueda">
+<br>
+</span>

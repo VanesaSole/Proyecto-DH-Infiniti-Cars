@@ -1,0 +1,322 @@
+*{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+#busqueda{
+    display: flex;
+    background-color: #ccb23e;  
+    padding-top: 0px;
+    padding-bottom: 0px;
+    justify-content: center;
+    font-size: auto;
+    width: 100vw;
+    max-width: 100%;
+}
+
+.swal2-container.swal2-center>.swal2-popup{
+    background-color: black !important;
+    border: 3px solid #ccb23e !important;
+
+}
+.swal2-html-container, .swal2-title{
+    color:  #ccb23e !important;
+}
+.swal2-icon.swal2-error {
+    border-color: #ccb23e !important;
+    
+}
+
+span .swal2-x-mark-line-left{
+    background-color: #ccb23e !important;
+}
+
+span .swal2-x-mark-line-right{
+    background-color: #ccb23e !important;
+}
+
+
+button.swal2-confirm.swal2-styled {
+    background-color: black !important;
+    color: #ccb23e!important;
+    border-color: #ccb23e!important;
+}
+
+
+
+main {
+    padding-top: 2%;
+    padding-bottom: 0%;
+}/*
+header{
+    background-color: black;
+    display: flex;
+    width: 100%;
+    box-sizing:border-box;
+    padding: 15px;
+    color: white;
+    align-items: center;
+
+}
+
+header img{
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: scale-down;
+}
+
+header span{
+    width: 80%;
+    visibility: hidden;
+}*/
+
+#busqueda{
+    display: flex;
+    background-color: #ccb23e;  
+    padding-bottom: 0px;
+    margin-bottom: 5px;
+    justify-content: center;
+    font-size: auto;
+    width: 100vw;
+}
+#busqueda h4{
+    border-radius: 5px;
+    width: 90%;   
+    background-color: white;
+    text-align: center;
+    color: gray;
+    margin: 7px 0px ;
+    padding: 2px;
+}
+
+body {
+
+    background-color: #cacaca;
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+/*
+#logo {
+    width: 25%;
+}
+
+#burger-menu {
+    font-size: 50px;
+    text-align: right;
+}*/
+
+h2 {
+    font-size: 30px;
+    margin-top: 40px;
+}
+
+.form input {
+    max-width: 95%; 
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    border: solid 2px rgb(197, 197, 197);
+    width: 600px;    
+}
+
+.form input:focus {
+    box-shadow: 0px 0px 10px rgb(170, 170, 170);
+    outline: none;
+    border: solid 2px rgb(137, 137, 137);
+    transition: 0.5s;
+}
+.formb {
+    width: 60vw;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    border: solid 2px rgb(197, 197, 197);  
+    background-color: white;  
+    padding-bottom: 3%;
+}
+
+.formb :focus {
+    box-shadow: 0px 0px 10px rgb(170, 170, 170);
+    outline: none;
+    border: solid 2px rgb(137, 137, 137);
+    transition: 0.5s;
+}
+
+.formb {
+    background-color: rgb(196, 196, 196);
+    padding: 12px;
+    border-radius: 7px;
+    margin: 10px;
+    border: solid 2px #b9b9b9;
+}
+
+.formb:hover {
+    background-color: #b9b9b9;
+    padding: 12px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px rgb(190, 190, 190);
+}
+
+footer {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: black;
+    color: white;
+    width: 100%;
+    margin-top: auto;
+}
+
+footer p {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+@media (min-width: 769px) {
+    
+    header span{
+        visibility: visible;
+        text-align: center;       
+    }
+
+    .formulario {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        max-width: 99%;
+        padding-left: 0%;
+        padding-right: 0%;
+        padding-bottom: 3%;
+    }
+
+/*
+    #micuenta {
+        white-space: nowrap;
+    }
+    #micuenta a:link {
+        text-decoration: none;
+        color: white;
+    }
+    #micuenta a:visited {
+        text-decoration: none;
+        color: white;
+    }
+    #micuenta a:hover {
+        text-decoration: none;
+        color: white;
+    }
+    #micuenta a:active {
+        text-decoration: none;
+        color: white;
+    }
+
+    #carrito a:link {
+        text-decoration: none;
+        color: white;
+    }
+    #carrito a:visited {
+        text-decoration: none;
+        color: white;
+    }
+    #carrito a:hover {
+        text-decoration: none;
+        color: white;
+    }
+    #carrito a:active {
+        text-decoration: none;
+        color: white;
+    }
+    
+
+
+    #burger-menu {
+        display: none;
+    }
+*/
+    .form input {
+        width: 50vw
+    }
+
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        padding: 2px;
+    }
+
+
+    .footer p {
+        width: 160px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+
+    footer .redes {
+        margin-top: 5px;
+    }
+
+    footer .logos {
+        margin-top: 5px;
+    }
+
+    footer .politicas {
+        margin-top: 10px;
+    }
+
+}
+
+@media (min-width: 769px) {
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        padding: 2px;
+    }
+
+
+    .footer p {
+        width: 160px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+
+    footer .redes {
+        margin-top: 5px;
+    }
+
+    footer .logos {
+        margin-top: 5px;
+    }
+
+    footer .politicas {
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 1280px) {
+    header span{
+        visibility: visible;
+        text-align: center;       
+    }
+
+    .form input {
+        width: 40vw
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    .footer p {
+        width: 160px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+}

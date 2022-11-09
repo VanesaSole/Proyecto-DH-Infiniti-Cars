@@ -1,0 +1,38 @@
+
+import React, { Component } from 'react';
+
+class VehiculosInDb extends Component  {
+    constructor(){
+        super()
+        this.state = {
+            vehicleList:[],
+        }
+    }
+
+    componentDidMount(){
+        fetch('http://localhost:3050/api/products')
+            .then(respuesta =>{
+                return respuesta.json()
+            })
+            .then(products =>{
+                this.setState({vehicleList: products.data})
+            })
+            .catch(error => console.log(error))
+
+    }
+
+    render(){
+        return (
+            <React.Fragment>
+                    {/*<!-- Categories in DB -->*/}
+
+            </React.Fragment>
+        )
+    
+    }
+
+}
+
+
+
+export default VehiculosInDb;

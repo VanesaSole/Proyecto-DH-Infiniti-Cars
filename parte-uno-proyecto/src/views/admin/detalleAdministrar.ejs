@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulario de edicion</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta name="viewport" content="width=device-wid th">
+    <meta charset="utf-8">
+    <link href="/css/styles+header.css" rel="stylesheet">
+    <link href="/css/styles+edicion.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e3500cfe31.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <%- include('../partials/header')%>
+
+    <main>
+        <article>
+            <h2>Editor de productos</h2>
+        </article>
+        <article>
+            <a class="edicion-texto" href="/agregar"> Agregar</a>
+        </article>
+        <table class="table">
+            <thead>
+            <tr>  
+                <th scope="col">Id</th>
+                <th class="ubicacion-nombre"scope="col">Nombre</th>
+                <th scope="col">Ver</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Borrar</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% for (let i=0;i<vehiculos.length;i++ ) { %> 
+            <tr class="interlineado-productos">
+                <td><%= vehiculos[i].id%> </td>
+                <td class="detallevehiculos"><%= vehiculos[i].brands.brand + " "+vehiculos[i].models.model + " "+vehiculos[i].categories.type_auto + " "+vehiculos[i].colors.color+" "+ vehiculos[i].years.year +" "+vehiculos[i].km_intervals.intervals +" km "+ vehiculos[i].transmission + " "+vehiculos[i].conditions+" " + "$"+vehiculos[i].prices %> </td>
+                <td><a class="edicion-texto2" href="/detalle/<%= vehiculos[i].id%> "> ver</a></td>
+                <td><a class="edicion-texto2" href="/editar/<%= vehiculos[i].id%> "> editar</ion-icon></a></td>
+                <td><a class="edicion-texto2" href="/delete/<%= vehiculos[i].id%>"> delete</a></td>
+            </tr>
+            <% }; %>
+            </tbody>
+        </table> 
+
+    </main>
+    <%- include('../partials/footer')%>
+</body>
+</html>
+

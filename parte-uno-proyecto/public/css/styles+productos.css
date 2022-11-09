@@ -1,0 +1,572 @@
+/*
+header{
+    background-color: black;
+    display: flex;
+    width: 100%;
+    box-sizing:border-box;
+    padding: 15px;
+    color: white;
+    align-items: center;
+
+}*/
+
+#elementosvacios {
+    visibility: hidden;
+}
+
+/*
+#menu-hamb.burger-mostrar{
+    right: 0
+}
+
+
+#menu-hamb ul li {
+    line-height: 30px;
+    border-bottom: solid 1px #ccb23e;
+}
+#menu-hamb ul{
+    padding-left: 12px;
+    padding-top: 5px;
+}
+
+.burger-menu {
+    font-size: 50px;
+    text-align: center;
+}*/
+
+
+
+
+#busqueda{
+    display: flex;
+    background-color: #ccb23e;  
+    justify-content: center;
+    font-size: auto;
+    width: 100vw;
+    max-width: 100%;
+}
+
+.search-form
+{
+    display: flex;
+    background-color: #ccb23e;  
+    justify-content: center;
+    font-size: auto;
+    width: 100vw;
+    max-width: 100%;
+    padding-left: 13%;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.collapsible {
+    background-color: #ccb23e;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}  
+.active:after {
+    content: "\2212";
+}
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #cacaca;
+}
+
+.content  button{
+    background-color: #cacaca; 
+    border: none;
+    color: black;
+    text-align: start;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.search-form_input{
+    font-size: 16px;
+    display: flex; 
+    justify-content: center;
+    font-size: auto;
+    width: 80vw;
+    max-width: 100%;
+}
+
+/*
+.seccion-barra1 {
+    display: none;
+}
+
+.seccion-barra2 {
+    display: none;
+}
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
+
+header a {
+    color: white;
+}
+
+.main-header{
+    justify-content: space-between;
+}
+.burger-menu{
+    display: flex;
+    font-size: 50px;
+}
+*/
+.descripcion-de-vehiculo {
+    text-decoration: none; 
+    color: black; 
+}
+/*
+header img{
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: scale-down;
+}
+header span{
+    width: 80%;
+    visibility:hidden;
+}*/
+.propaganda{
+    width: 100%;
+    height: 15%;
+}
+body{
+    background-color: #cacaca;
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;  
+    box-sizing: border-box;
+
+}
+.contenedor-productos{
+    box-sizing:border-box;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
+    
+    
+}
+#milochocpx{
+    display: block;
+}
+.productos{
+    box-sizing:border-box;
+    border:  solid gray;    
+    border-radius: 20px;
+    color: black;
+    padding: 10;
+    background-color: white;
+    margin: 15px;
+
+}
+.productos:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+footer {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: black;
+    color: white;
+    margin-top: auto;
+    max-width: 100%;
+}
+
+footer p {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+#busqueda{
+    display: flex;
+    background-color: #ccb23e;  
+    justify-content: center;
+    font-size: auto;
+
+}
+#busqueda h4{
+    width: 90%;   
+    background-color: white;
+    text-align: center;
+    color: gray;
+}
+#paginas-mobile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+#paginas a{
+    color: black;
+}
+.filtros-mobile{
+    color:black;
+    border: solid gray;
+    
+}
+img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.filtros{
+    display: none;
+}
+.headerfiltros{
+    display: none;
+}
+.paginados-number{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+@media (min-width: 556px) {
+    .contenedor-productos{    
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        
+        
+    }/*
+    .burger-menu {
+        display: none;
+    }*/
+    
+    .productos{
+        flex-basis:35%;
+        flex-grow: 2;
+        flex-direction: row;
+        background-color: white;
+        font-size: 20ph;
+        /*line-height: 1px; */   
+        max-width: 45%;
+        
+    }
+    .productos img{
+
+        max-width: 100%;
+        max-height: 63%;
+        object-fit: scale-down;
+    }/*
+    header span{
+        display: flex;
+        visibility:visible;
+        justify-content: space-around;
+        align-items: center;
+        
+    }
+*/
+}
+
+@media (min-width: 769px) {
+    /*.burger-menu {
+        display: none;
+    }
+    header div{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+         
+    .main-header{
+        background-color: black;
+        padding:15px;
+        display: flex;
+        justify-content: space-between;
+        /*justify-content: flex-start;*/
+/*    }
+    
+    .logo{
+        max-width: 100px;
+    }
+    
+    .seccion-barra1 {
+        display: flex;
+        font-size: 12px;
+        color:white;
+        align-self: center;
+    }
+    
+    .seccion-barra1 a{
+        flex-direction: row;
+        color:white;
+        text-decoration: none;
+        margin: 0 20px;
+        font-size: 16px;
+        margin: 0px 8px;
+    }
+    
+    
+    
+    .seccion-barra2{
+        display: flex;
+        font-size: 12px;
+        color:white;
+        align-items: center;
+        /*font-size: 16px;
+        color:white;
+        align-self: center;*/
+ /*   }
+    
+    .seccion-barra2 a{
+        flex-direction: row;
+        color:white;
+        text-decoration: none;
+        margin: 0 5px;
+        padding: 0px 33px;
+        /*align-items:center;*/
+    /*    font-size: 16px;
+    }
+    #burger-menu {
+        display: none;
+    }*/
+
+    .filtros-mobile{
+        display: none;
+    }
+    .headerfiltros{
+        padding-top: 5px;
+        display: flex;
+        margin-bottom: 5px;
+        align-items: flex-start;
+
+    }
+    #titular-filtro{
+        color: white;
+        background-color: #ccb23e;
+        border-radius: 5px;
+        width: 15%;
+
+    }
+    #titular-orden{
+        width: 30%;   
+        text-align: right; 
+        padding-right: 30px;
+
+    }
+    #titular-seleccion{
+        width: 60%;  
+        text-align: left; 
+        padding-left: 30px;
+        
+    }
+    .ordenar {
+        position: absolute;
+        right : 34px;
+ 
+    }
+    .filtros{
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        width: 15%;
+        text-align: justify;
+        font-size: 10vp;
+        background-color: #cacaca;
+        
+
+    }
+    ul{
+        list-style-type: none;
+        text-align: center;
+        color: black;
+        margin: 0;
+        padding: 0;
+        line-height: 20px;
+    }
+    li{
+        text-align: left;
+        color: gray;
+        margin-left: 10px;
+    }
+    .contenedor-productos{
+        width: 85%;
+        padding-top: 0%;
+    }
+    .productos{
+        margin-top: 0%;
+        max-width: 45.7%;
+        
+    }
+    #marketplace{
+        display: flex;
+        align-items: stretch;
+    
+    }
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        padding: 2px;
+    }
+
+
+    .footer p {
+        width: 160px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+
+    footer .redes {
+        margin-top: 5px;
+    }
+
+    footer .logos {
+        margin-top: 5px;
+    }
+
+    footer .politicas {
+        margin-top: 10px;
+    }
+
+
+    #ultimo{
+        display: none;
+    }
+    
+}
+@media (min-width: 900px) {
+    .productos{
+        flex-basis:23%;
+        height: 259px;
+        max-width: 30%;
+    }
+    .contenedor-productos{
+        align-content: flex-start;
+    }
+    #search-form{
+        width: 80%;
+        padding-left: 10%;
+        padding-right: 10%;
+
+    }
+}
+
+@media (min-width: 1280px) {
+
+/*
+    header div{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+         
+    .main-header{
+        background-color: black;
+        padding:15px;
+        display: flex;
+        justify-content: space-between;
+        /*justify-content: flex-start;*/
+ /*   }
+    
+    .logo{
+        max-width: 100px;
+    }
+    
+    .seccion-barra1 {
+        display: flex;
+        font-size: 12px;
+        color:white;
+        align-self: center;
+    }
+    
+    .seccion-barra1 a{
+        flex-direction: row;
+        color:white;
+        text-decoration: none;
+        margin: 0 20px;
+        font-size: 16px;
+        margin: 0px 8px;
+    }
+    
+    
+    
+    .seccion-barra2{
+        display: flex;
+        font-size: 12px;
+        color:white;
+        align-items: center;
+        /*font-size: 16px;
+        color:white;
+        align-self: center;*/
+ /*   }
+    
+    .seccion-barra2 a{
+        flex-direction: row;
+        color:white;
+        text-decoration: none;
+        margin: 0 5px;
+        padding: 0px 33px;
+        /*align-items:center;*/
+ /*       font-size: 16px;
+    }*/
+    
+    
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    .footer p {
+        width: 160px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+}
+
+@media (min-width: 1800px) {
+    #ultimo{
+        display: none;
+    }
+    #milochoc{
+        display: block;
+    }
+    .productos{
+        max-width: 23%;
+    }
+}
+
+

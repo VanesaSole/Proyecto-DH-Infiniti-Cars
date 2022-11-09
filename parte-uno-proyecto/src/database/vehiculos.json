@@ -1,0 +1,101 @@
+[
+  {
+    "id": "1",
+    "nombre": "Ford Focus III 2.0 Se Plus Mt",
+    "año": "2022",
+    "kilometraje": "1.000",
+    "precio": "$ 6.050.000",
+    "transmision": "Manual",
+    "imagen": "focus.jpeg"
+  },
+  {
+    "id": "2",
+    "nombre": "Ford Focus III 2.0 Se Plus Mt",
+    "año": "2022",
+    "kilometraje": "1.000",
+    "precio": "$ 6.050.000",
+    "transmision": "Manual",
+    "imagen": "focus.jpeg"
+  },
+  {
+    "id": "3",
+    "nombre": "Ford Focus III 2.0 Se Plus Mt",
+    "año": "2022",
+    "kilometraje": "1.000",
+    "precio": "$ 6.050.000",
+    "transmision": "Manual",
+    "imagen": "focus.jpeg"
+  },
+  {
+    "id": "4",
+    "nombre": "Nissan Kicks 1.6 Advance Cvt 120cv",
+    "año": "2018",
+    "kilometraje": "20.000",
+    "precio": "$ 10.050.000",
+    "transmision": "Manual",
+    "imagen": "nissan k.jpeg"
+  },
+  {
+    "id": "5",
+    "nombre": "Chevrolet Cruze II 1.4 Lt 153cv",
+    "año": "2021",
+    "kilometraje": "10.000",
+    "precio": "$ 7.050.000",
+    "transmision": "Manual",
+    "imagen": "chevrolet cruze.jpeg"
+  },
+  {
+    "id": "6",
+    "nombre": "Peugeot 208 1.6 Active",
+    "año": "2022",
+    "kilometraje": "50.000",
+    "precio": "$ 8.050.000",
+    "transmision": "Manual",
+    "imagen": "peugeot active.jpeg"
+  },
+  {
+    "id": "7",
+    "nombre": "Renault Kwid 1.0 Sce 66cv",
+    "año": "2020",
+    "kilometraje": "110.000",
+    "precio": "$ 4.050.000",
+    "transmision": "Manual",
+    "imagen": "renault kwid.jpeg"
+  },
+  {
+    "id": "8",
+    "nombre": "Renault Captur 2.0 Intens",
+    "año": "2019",
+    "kilometraje": "50.000",
+    "precio": "$ 7.050.000",
+    "transmision": "Manual",
+    "imagen": "reno-capture.jpeg"
+  },
+  {
+    "id": "9",
+    "nombre": "Volkswagen Amarok 2.0 Cd ",
+    "año": "2022",
+    "kilometraje": "120.000",
+    "precio": "$ 12.050.000",
+    "transmision": "Manual",
+    "imagen": "volkswagenamarok.jpg"
+  },
+  {
+    "id": "10",
+    "nombre": "Audi A4 2.0 Fsi Quattro 252cv",
+    "año": "2019",
+    "kilometraje": "10.000",
+    "precio": "$ 10.050.000",
+    "transmision": "Manual",
+    "imagen": "audia4.jpeg"
+  },
+  {
+    "id": "11",
+    "nombre": "Jeep Compass 2.4 Limited Plus",
+    "año": "2020",
+    "kilometraje": "30.000",
+    "precio": "$ 12.050.000",
+    "transmision": "Manual",
+    "imagen": "jeep compas.jpeg"
+  }
+]

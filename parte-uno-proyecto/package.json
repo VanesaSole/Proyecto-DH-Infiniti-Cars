@@ -1,0 +1,31 @@
+{
+  "name": "grupo-9-easy-come-easy-go",
+  "version": "1.0.0",
+  "description": "Proyecto\r posibles nombres?:\r Easy-come-easy-go es un fragmento de una cancion de Queen pero lo quise usar como \"fácil viene, fácil se va”, es mi aporte para nombre del proyecto Pedro.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReynosoPedro/Grupo-9-Easy-come-easy-go.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ReynosoPedro/Grupo-9-Easy-come-easy-go/issues"
+  },
+  "homepage": "https://github.com/ReynosoPedro/Grupo-9-Easy-come-easy-go#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "express-validator": "^6.14.2",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.3"
+  }
+}

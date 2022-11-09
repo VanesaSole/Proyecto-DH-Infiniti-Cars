@@ -1,0 +1,72 @@
+[
+ {
+  "id": 1,
+  "nombreCompleto": "super",
+  "usuario": "mario",
+  "password": "$2a$10$qFlaW.ZKWpcsOqwyUSGTK.qs4fS8BRy/45G/h57d4Kcni2HjXoYZK",
+  "fechaDeNacimiento": "2022-07-14",
+  "email": "skug@sljdj.com",
+  "celular": "1165326532",
+  "categoria": "Comprador",
+  "terminos": "on",
+  "newsletter": "on",
+  "avatar": "1659267584253_img.jpg",
+  "rol": "1"
+ },
+ {
+  "id": 2,
+  "nombreCompleto": "vanesa",
+  "usuario": "vane",
+  "password": "$2a$10$7zYfQyl0N0eT6LA5l1.TYOXH0Zc4OTEoQfURo5rFm0FBghVP74IZO",
+  "fechaDeNacimiento": "",
+  "email": "abcd@gmail.com",
+  "celular": "1762556362",
+  "categoria": "Comprador",
+  "terminos": "on",
+  "newsletter": "on",
+  "avatar": "1659309134689_img.jpg",
+  "rol": "9"
+ },
+ {
+  "id": 3,
+  "nombreCompleto": "Hola que",
+  "usuario": "tal",
+  "password": "$2a$10$.mh33x.Qo1tFDJpHIxrAXe8fGZvkooB1XEVjPV5wGg4Q85eXeqe6i",
+  "fechaDeNacimiento": "",
+  "email": "jjjj@gmail.com",
+  "celular": "1762556362",
+  "categoria": "Comprador",
+  "terminos": "on",
+  "newsletter": "on",
+  "avatar": "1659406036235_img.jpg",
+  "rol": "1"
+ },
+ {
+  "id": 4,
+  "nombreCompleto": "fdfdfd",
+  "usuario": "32760222",
+  "password": "$2a$10$HbMs4b1sacIPNA21rOHlJuGJ3HEK30.FBulhWqe1sYBbZ3/W9tHJW",
+  "fechaDeNacimiento": "1990-11-17",
+  "email": "marcelinoagonzalez2022@gmail.com",
+  "celular": "11 5499 8631",
+  "categoria": "Vendedor",
+  "terminos": "on",
+  "newsletter": "on",
+  "avatar": "1659472366390_img.jpg",
+  "rol": "1"
+ },
+ {
+  "id": 5,
+  "nombreCompleto": "Pedro Reynoso",
+  "usuario": "Qwerty",
+  "password": "$2a$10$fvx6RzyD/MJBUAQoEmI60uAeUZX.780oDyOAeTHOHPQV69iBMNowC",
+  "fechaDeNacimiento": "",
+  "email": "pedro.reynoso.2022@gmail.com",
+  "celular": "01114233056",
+  "categoria": "Comprador",
+  "terminos": "on",
+  "newsletter": "on",
+  "avatar": "1660309666675_img.jpg",
+  "rol": "9"
+ }
+]

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta name="viewport" content="width=device-wid th">
+    <meta charset="utf-8">
+    <link href="/css/styles+header.css" rel="stylesheet">
+    <link href="/css/sltyles+register-login.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e3500cfe31.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <%- include('../partials/header')%>
+    <main>
+        <h2 class = "mi-perfil">Edita tu perfil</h2>
+        <section id="formulario">
+            <a><img  class="foto-perfil" src="/images/usuarios/<%= locals.old && locals.old. oldImage? locals.old.oldImage: usuarioEdit.image %>"  style= 'width: 20rem; height: 20rem; 'alt="Foto"></a>
+            <form method="POST" action="/editarPerfil?_method=PUT"" enctype="multipart/form-data" >
+                <div class="form">
+                    <label for="nombre"></label>
+                    <input type="text" name="nombreCompleto" id="nombre" placeholder="Nombre completo"
+                    value="<%= locals.old && locals.old.nombreCompleto? locals.old.nombreCompleto : usuarioEdit.full_name %>">
+                    <div id = "errorNombre" class="containerError"></div>
+                    <% if (locals.errors && errors.nombreCompleto){ %>
+                    <div class="mensajeError">
+                        <%= errors.nombreCompleto.msg %>
+                    </div>
+                <% } %>
+                </div>
+                <div class="form">
+                    <label for="usuario"></label>
+                    <input type="text" name="usuario" id="usuario" placeholder="Usuario"
+                    value="<%= locals.old && locals.old.usuario? locals.old.usuario : usuarioEdit.user %>"
+                    >
+                    <div id = "errorUsuario" class="containerError"></div>
+                    <% if (locals.errors && errors.usuario){ %>
+                        <div class="mensajeError">
+                            <%= errors.usuario.msg %>
+                        </div>
+                    <% } %>
+                </div>
+                <div class="form">
+                    <label for="password"></label>
+                    <input type="password" name="password" id="password" placeholder="Contraseña">
+                    <div id = "errorPassword" class="containerError"></div>
+                    <% if (locals.errors && errors.password){ %>
+                        <div class="mensajeError">
+                            <%= errors.password.msg %>
+                        </div>
+                    <% } %>
+                </div>
+                <div class="form">
+                    <label for="fecha-de-nacimiento"></label>
+                    <input type="date" name="fechaDeNacimiento" id="fechadenacimiento" placeholder="Fecha de nacimiento" value="<%= locals.old && locals.old.fechaDeNacimiento? locals.old.fechaDeNacimiento :  usuarioEdit.date_birth %>">
+                    <div id = "errorFecha" class="containerError"></div>
+                </div>
+                <div class="form">
+                    <label for="email"></label>
+                    <input type="email" name="email" id="email" placeholder="Email"
+                    value="<%= locals.old && locals.old.email? locals.old.email : usuarioEdit.email %>"
+                    >
+                    <div id = "erroremail" class="containerError"></div>
+                    <% if (locals.errors && errors.email){ %>
+                        <div class="mensajeError">
+                            <%= errors.email.msg %>
+                        </div>
+                    <% } %>
+                </div>
+                <div class="form">
+                    <span>
+                        <label for="celular"></label>
+                        <input type="tel" name="celular" id="celular" placeholder="Celular"
+                        value="<%= locals.old && locals.old.celular? locals.old.celular : usuarioEdit.phone %>">
+                        <div id = "errorcelular" class="containerError"></div>
+                        <% if (locals.errors && errors.celular){ %>
+                            <div class="mensajeError">
+                                <%= errors.celular.msg %>
+                            </div>
+                        <% } %>
+                    </span>
+                </div>
+                <div>
+
+            </div>
+            <div class="form">
+            <input type="hidden" name="oldImage" id="oldImage" value=<%= locals.old && locals.old.oldImage? locals.old.oldImage: usuarioEdit.image %> />
+            <label for ="avatar"> </label>
+            <input type="file"   name="avatar"  placeholder="Elige una imagen">
+            <% if (locals.errors && errors.avatar){ %>
+                <div class="mensajeError">
+                    <%= errors.avatar.msg %>
+                </div>
+            <% } %>
+            </div>
+
+                <button type="submit">Editar!</button>
+                <br>
+                <INPUT TYPE="button" VALUE="volver" onClick="history.go(-1);">
+            </form>
+            <br>
+            <p>
+                Ya tenes cuenta? <a href="/login">Log in</a>
+            </p>
+        </section>
+    </main>
+    <%- include('../partials/footer')%>
+    <script src= "js/edituser.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

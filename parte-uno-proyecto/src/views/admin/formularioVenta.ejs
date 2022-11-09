@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta name="viewport" content="width=device-wid th">
+    <meta charset="utf-8">
+    <link href="/css/styles+header.css" rel="stylesheet">
+    <link href="/css/styles vender.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e3500cfe31.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <%- include('../partials/header')%>
+    <main>
+        <h2> FORMULARIO DE VENTA </h4>
+            <br>
+        <ul class="errorescamp"></ul>
+        <form method="POST" action="agregar" enctype="multipart/form-data" >
+            <div class="formulario" id="formulario">
+            <!--    
+                los datos para el formulario llegan en un array llamado bases=[marcas,modelos,categorias,uso,edad,color]
+                0- marcas 
+                1-modelos
+                2-categorias
+                3-kilometraje
+                4-año (habia un conflicto con year entonces le tuve que ponen edad)
+                5-colores
+                ejemplo si quiero mostrar la marca 1->bases[0][1].brand y su ID seria->bases[0][1].id
+            -->
+            <div class="part1">
+                <div class="form" id="error1">
+                    <p> Marca  </p><select onclick="empty()" class="selectMarca" type="text" name="marca" id="marca" placeholder="Marca"  value="<%= locals.old && locals.old.marca? locals.old.marca : null %>">
+                    <option  value="<%= locals.old && locals.old.marca? locals.old.marca : null %>" selected > <%= locals.old  && locals.old.marca ? bases[0][locals.old.marca-1].brand  : "Seleccione una opcion" %></option>
+                        <% for(let i= 0; i < bases[0].length; i++){ %>
+                                <option value=<%= bases[0][i].id %> > <%= bases[0][i].brand %></option>
+                        <% } %> 
+
+                        
+                    </select>
+                <% if(locals.errors && errors.marca ){ %>
+                        <p class="mensajeError"><%= errors.marca.msg  %> </p>
+                <% } %>
+                </div>
+                <div class="form" id="error2">
+                    <p> Modelo  </p><select onclick="filterModel()" type="text" name="modelo" id="modelo" placeholder="Modelo" value="<%= locals.old && locals.old.modelo? locals.old.modelo : null %>">
+                        <option value="<%= locals.old && locals.old.modelo? locals.old.modelo : null %>" selected> <%= locals.old  && locals.old.modelo ? bases[1][locals.old.modelo-1].model : "Seleccione una opcion" %></option>
+                    <!--    <% for(let i= 0; i < bases[1].length; i++){ %>
+                            <option value=<%= bases[1][i].id %> > <%= bases[1][i].model %></option>
+                    <% } %>
+                    -->
+                    </select>
+                    <% if(locals.errors && errors.modelo){ %>
+                        <p class="mensajeError"><%= errors.modelo.msg  %> </p>
+                    <% } %>
+                </div>
+                <div class="form" id="error3">
+                    <p> Kilometraje </p><select type="number" name="kilometraje" id="kilometraje" placeholder="Kilometraje" value="<%= locals.old && locals.old.kilometraje? locals.old.kilometraje : null %>">
+                    <option value="<%= locals.old && locals.old.kilometraje? locals.old.kilometraje : null %>" selected  > <%= locals.old  && locals.old.kilometraje ? bases[3][locals.old.kilometraje-1].intervals : "Seleccione una opcion" %></option>
+                        <% for(let i= 0; i < bases[3].length; i++){ %>
+                                <option value= <%= bases[3][i].id %> ><%= bases[3][i].intervals %></option>
+                        <% } %>
+                        </select >
+                        <% if(locals.errors && errors.kilometraje ){ %>
+                            <p class="mensajeError"><%= errors.kilometraje.msg  %> </p>
+                        <% } %>
+                    
+                </div>
+                <div class="form" id="error4">
+                    <p> Precio </p><input type="number" name="precio" id="precio" placeholder="Precio" value="<%= locals.old && locals.old.precio? locals.old.precio : null %>">
+                </div>
+                <% if(locals.errors && errors.precio ){ %>
+                    <p class="mensajeError"><%= errors.precio.msg  %> </p>
+                <% } %>
+                <div class="form" id="error5"> 
+                    <p> Color </p><select type="text" name="color" id="color" placeholder="Color" value="<%= locals.old && locals.old.color? locals.old.color : null %>">
+                    <option value="<%= locals.old && locals.old.color? locals.old.color : null %>" selected  > <%= locals.old  && locals.old.color ? bases[5][locals.old.color-1].color : "Seleccione una opcion" %></option>
+                        <% for(let i= 0; i < bases[5].length; i++){ %>
+
+                                <option value= <%= bases[5][i].id %> ><%= bases[5][i].color%></option>
+                        <% } %>
+                        </select >
+                        <% if(locals.errors && errors.color ){ %>
+                            <p class="mensajeError"><%= errors.color.msg  %> </p>
+                        <% } %>
+                </div>  
+            </div>
+            <div class="part2">
+                <div class="form" id="error6">
+                    <p> Año </p><select  type="number" name="year" id="year" placeholder="Año" value="<%= locals.old && locals.old.year? locals.old.year : null %>" >
+                    <option value="<%= locals.old && locals.old.year? locals.old.year : null %>" selected > <%= locals.old  && locals.old.year ? bases[4][locals.old.year-1].year : "Seleccione una opcion" %></option>
+                        <% for(let i= 0; i < bases[4].length; i++){ %>
+                                <option value= <%= bases[4][i].id %> ><%= bases[4][i].year %></option>
+                        <% } %>
+                        </select >
+                        <% if(locals.errors && errors.year ){ %>
+                            <p class="mensajeError"><%= errors.year.msg  %> </p>
+                        <% } %>
+                </div>
+                <div class="form" id="error7">
+                    <p> Combustible </p><select type="text" name="combustible" id="combustible" placeholder="Combustible" value="<%= locals.old && locals.old.combustible? locals.old.combustible : null %>">
+                    <option value="<%= locals.old && locals.old.combustible? locals.old.combustible : null %>" selected > <%= locals.old  && locals.old.combustible ? locals.old.combustible : "Seleccione una opcion" %></option>
+                    <option value="Nafta" >Nafta </option>
+                    <option value="Gasoil" >Gasoil</option>
+                    <option value="GNC" >GNC </option>
+                    <option value="Electrico" >Electrico </option>
+                </select >
+                <% if(locals.errors && errors.combustible ){ %>
+                    <p class="mensajeError"><%= errors.combustible.msg  %> </p>
+                <% } %>
+                </div>
+                <div class="form" id="error8">
+                    <p> Transmision </p><select type="text" name="transmision" id="transmision" placeholder="Transmision" value="<%= locals.old && locals.old.transmision? locals.old.transmision : null %>">
+                    <option value="<%= locals.old && locals.old.transmision? locals.old.transmision : null %>" selected> <%= locals.old  && locals.old.transmision ? locals.old.transmision : "Seleccione una opcion" %></option>
+                    <option value="Manual" >Manual </option>
+                    <option value="Automatica" >Automatica </option>
+                </select >
+                <% if(locals.errors && errors.transmision ){ %>
+                    <p class="mensajeError"><%= errors.transmision.msg  %> </p>
+                <% } %>
+                </div>
+                <div class="form" id="error9">
+                    <p> Condición </p><select type="text" name="condicion" id="condicion" placeholder="Condición" value="<%= locals.old && locals.old.condicion? locals.old.condicion : null %>" >
+                        <option value="<%= locals.old && locals.old.condicion? locals.old.condicion : null %>" selected> <%= locals.old  && locals.old.condicion ? locals.old.condicion : "Seleccione una opcion" %></option>
+                    <option value="Nuevo" >Nuevo </option>
+                    <option value="Usado" >Usado </option>
+                </select >
+                <% if(locals.errors && errors.condicion){ %>
+                    <p class="mensajeError"><%= errors.condicion.msg  %> </p>
+                <% } %>
+                </div>
+                <div class="form" id="error10">
+                    <p> Categoria </p><select onclick="filterCategories()" type="text" name="categoria" id="categoria" placeholder="Categoria"  value="<%= locals.old && locals.old.categoria? locals.old.categoria : null %>">
+                        <option value="<%= locals.old && locals.old.categoria? locals.old.categoria : null %>" selected > <%= locals.old  && locals.old.categoria ? bases[2][locals.old.categoria-1].type_auto : "Seleccione una opcion" %></option>
+                     <!-- 
+                        <% for(let i= 0; i < bases[2].length; i++){ %>
+                            <option value= <%= bases[2][i].id %> ><%= bases[2][i].type_auto %></option>
+                    <% } %>
+                        -->
+                    </select >
+                    <% if(locals.errors && errors.categoria){ %>
+                        <p class="mensajeError"><%= errors.categoria.msg  %> </p>
+                    <% } %>
+                </div>
+
+
+    
+
+            </div>
+            </div>
+        <p> Descripcion </p><input class="description" type="text" name="descripcion" id="descripcion" placeholder="Danos una breve descripcion del estado del vehiculo"  
+                            value="<%= locals.old && locals.old.descripcion? locals.old.descripcion : null %>"></input>
+            
+        <br>
+        <% if(locals.errors && errors.descripcion){ %>
+            <p class="mensajeError"><%= errors.descripcion.msg %> </p>
+            <% } %>
+            <br>
+        <br>
+        <div class="contenedor-img" >
+            <div class="custom-file" id="error11">
+                <label for ="image" >
+                    <img id="blah" src="/images/pngwing.png" alt="" />
+                </label>
+                <input type="file"   name="imagen"  id="image" placeholder="Elige una imagen" accept=".png, .jpg, .jpeg" value="" />  
+                <% if(locals.errors && errors.image){ %>
+                    <p class="mensajeError"><%= errors.image.msg  %> </p>
+                <% } %>
+            </div>
+            <br>
+            <div class="custom-file" id="error12"> 
+                <label for ="image2">
+                    <img id="blah2" src="/images/pngwing.png" alt="" />
+                </label>
+            <input  type="file" name="imagen2" id="image2" placeholder="image 2"  accept=".png, .jpg, .jpeg" value="" />  
+
+            <% if(locals.errors && errors.image2){ %>
+            <p class="mensajeError"><%= errors.image2.msg %> </p>
+            <% } %>
+            </div>
+            <br>
+            <div class="custom-file" id="error13">
+                <label for ="image3">
+                    <img id="blah3" src="/images/pngwing.png" alt="" />
+                </label>
+            <input  type="file" name="imagen3"  id="image3" placeholder="image 3"  accept=".png, .jpg, .jpeg" value="" /> 
+            
+            <% if(locals.errors && errors.image3){ %>
+            <p class="mensajeError"><%= errors.image3.msg  %>  </p>
+            <% } %>
+            </div>
+            <br>
+            <div class="custom-file" id="error14">
+                <label for ="image4">
+                    <img id="blah4" src="/images/pngwing.png" alt="" />
+                </label>
+            <input  type="file" name="imagen4" id="image4" placeholder="image 4"  accept=".png, .jpg, .jpeg"  value="" /> 
+            
+            <% if(locals.errors && errors.image4){ %>
+            <p class="mensajeError"><%= errors.image4.msg  %>  </p>
+            <% } %>
+            </div>
+            <br>
+            <div class="custom-file" id="error15">
+                <label for ="image5">
+                    <img id="blah5" src="/images/pngwing.png" alt="" />
+                </label>
+            <input type="file" name="imagen5"  id="image5" placeholder="image 5"  accept=".png, .jpg, .jpeg"  value="" /> 
+            
+            <% if(locals.errors && errors.image5){ %>
+            <p class="mensajeError"><%= errors.image5.msg  %> </p>
+            <% } %>
+            </div> 
+            <br>
+            <br>
+            
+
+            </div>
+            <br>
+            <button class="formb" type="submit">Publicar</button>   
+        </form>
+        
+    </main>
+    <%- include('../partials/footer')%>
+    <script src= "/js/formularioVentas.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

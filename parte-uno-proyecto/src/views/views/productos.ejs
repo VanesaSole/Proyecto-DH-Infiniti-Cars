@@ -1,0 +1,168 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Detalle de productos</title>
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <meta name="viewport" content="width=device-wid th">
+        <meta charset="utf-8">
+        <link href="/css/styles+header.css" rel="stylesheet">
+        <link href="/css/styles+productos.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/e3500cfe31.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header class="main-header">
+            <div>
+                <a href="/"><img src="/images/infiniticars.png" class="logo" /></a>
+            </div>
+            <div class="seccion-barra2">
+                <% if( locals.userLogged==null){%> <a> </a>
+                    <% }else if (locals.userLogged.state==9 || locals.userLogged.rol==9) { %>
+                        <a href="/administrar">Admin</a>
+                        <% } %>
+                            <i class="fas fa-search"></i>
+                            <a href="/nosotros">Nosotros</a>
+                            <a href="/productos/1">Catálogo</a>
+            </div>
+            <div class="seccion-barra2">
+                <a href="/agregar">Vende tu auto</a>
+                <% if (locals.isLogged) { %>
+                    <a class="sesion" class="fa-solid fa-basket-shopping" href="/shop-cart">Carrito</a>
+                    <a href="/profile" class="miniatura">
+                        <div>
+                            <img src="/images/usuarios/<%= locals.userLogged.image %>"
+                                style="border-radius: 50%; width: 2.5rem; height: 2.5rem" alt="Foto" />
+                        </div>
+                        <div>
+                            <%= locals.userLogged.user %>
+                    </a>
+            </div>
+            <a class="sesion" href="/profile">Mi perfil</a>
+            <a class="sesion" href="/logout">Cerrar sesion</a>
+            <% } else { %>
+                <a class="sesion2" href="/register">Registrate</a>
+                <a class="sesion2" href="/login">Inicia sesion</a>
+                <% } %>
+                    </div>
+        
+        
+        
+        
+        
+                    <div id="menu-hamb">
+                        <ul type="none">
+                            <li><a href="/">Home</a></li>
+                            <% if( locals.userLogged==null){%> <a> </a>
+                                <% }else if (locals.userLogged.state==9 || locals.userLogged.rol==9) { %>
+                                    <li><a href="/administrar">Admin</a></li>
+                                    <% } %>
+                                        <li><a href="/nosotros">Nosotros</a></li>
+                                        <li><a href="/productos/1">Catálogo</a></li>
+                                        <li><a href="/agregar">Vende tu auto</a></li>
+                                        <% if (locals.isLogged) { %>
+                                            <li><a class="shop-left" class="fa-solid fa-basket-shopping"
+                                                    href="/shop-cart">Carrito</a></li>
+                                            <%= locals.userLogged.user %>
+                                                <li><a href="/profile">Mi perfil</a></li>
+                                                <li><a href="/logout">Cerrar sesion</a></li>
+                                                <% } else { %>
+                                                    <li><a href="/register">Registrate</a></li>
+                                                    <li><a href="/login">Inicia sesion</a></li>
+                                                    <% } %>
+                        </ul>
+                    </div>
+        
+        
+        
+        
+                    <a href="#" class="burger-menu"><i class="fas fa-bars"></i></a>
+                    <script src="js/menuBurger.js"></script>
+        </header>
+        <div class="col-7 col-md-6">
+            <div class="search-form">
+                <input onchange="ready()" type="text" name="keywords" placeholder="Buscar productos por marca y modelo" class="search-form_input">
+                <button onclick="ready()" type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        
+        <main>   
+            <div class="headerfiltros">
+                <div class="ordenar">
+                    <select onclick="ready()" type="text" name="orden" id="orden" placeholder="orden" >
+                    <option   value="1" selected > Mas baratos ↓</option>
+                    <option   value="2"  > Mas caros </option>
+                    <option   value="3"  > Mas vistos </option>
+                </select>
+                </div>
+            </div>
+            <br>
+            <section id="marketplace">
+            <div class="filtros-mobile">
+                <span>Tipo  |</span>
+                <span>Marca | </span>
+                <span>+Filtros  |</span>
+                <span> Ordenar: ej Precio </span>
+                <span><i class="fa-solid fa-arrow-down"></i></span>
+            </div>
+            <div class="filtros">
+                <button  class="collapsible">FILTROS</button>
+                <div class="content" id="marcaContent">
+                <p onclick="filter()" id="filtroCategories"></p>               
+                </div>
+
+                <button class="collapsible">Categorias</button>
+                <div class="content" id="marcaContent">
+                    <p ><button id="cat1" onclick="filter(1)" >Sédan</button></p>
+                    <p ><button id="cat2" onclick="filter(2)">Hatchback</button></p>
+                    <p ><button id="cat3" onclick="filter(3)">Coupe</button></p>
+                    <p ><button id="cat4" onclick="filter(4)">Sport</button></p>
+                    <p ><button  id="cat5"onclick="filter(5)">Convertible</button></p>
+                    <p ><button id="cat6"onclick="filter(6)">Utilitario</button></p>
+                    <p ><button id="cat7" onclick="filter(7)">Coupe</button></p>
+                </div>
+                <button class="collapsible">Año</button>
+                <div class="content" id="marcaContent">
+                    <p>2022</p>
+                    <p>2021</p>
+                    <p>2020</p>
+                    <p>2019</p>
+                </div>
+                <button class="collapsible">Condicion</button>
+                <div class="content" id="marcaContent">
+                    <p>Nuevo</p>
+                    <p>Usado</p>
+                </div>
+                <button class="collapsible">Marca</button>
+                <div class="content" id="marcaContent">
+                    <p>Ford</p>
+                    <p>Honda</p>
+                    <p>BMW</p>
+                    <p>Peugeot</p>
+                    <p>Jaguar</p>
+                    <p>Hyundai</p>
+                </div>
+                <button class="collapsible">Kilometros</button>
+                <div class="content" id="marcaContent">
+                    <p>menos</p>
+                    <p>mas</p>
+                </div>
+                <button class="collapsible">Combustible</button>
+                <div class="content" id="marcaContent">
+                    <p>Electrico</p>
+                    <p>Diesel</p>
+                    <p>Hibrido</p>
+                </div>
+            </div>
+            <section class="contenedor-productos" id="contenedor-productos">
+            </section>
+            </section>
+                <div id="paginas-mobile">
+                    <a id="preview" ><button > <i class="fa-solid fa-chevron-left"></i></button> </a>
+                    <ul id="paginas" class="paginados-number"></ul>
+                    <a id="next" href="" ><button id="next"><i class="fa-solid fa-chevron-right"></i></button> </a>
+                    
+                </div>
+        </main>
+        <%- include('../partials/footer')%>
+        <script src= "/js/catalogo.js"></script>
+    </body>
+</html>

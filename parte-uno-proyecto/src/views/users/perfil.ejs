@@ -1,0 +1,53 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        <title>Profile</title>
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <meta name="viewport" content="width=device-width">
+        <meta charset="utf-8">
+        <link href="/css/styles+header.css" rel="stylesheet">
+        <link href="/css/styles+profiles.css" rel="stylesheet">     
+        <script src="https://kit.fontawesome.com/e3500cfe31.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <%- include('../partials/header')%>
+        <div class="container" style="margin-top: 20px;">
+		<div>
+
+                    <div class="container" style="margin-top: 20px;">
+		<div class = "fondo-perfil">
+			<div style= 'text-align: center;'>
+                <h2> <%= info.user.nombreCompleto %></h2>
+                <h2 class = "mi-perfil">Mi perfil</h2>
+				<a><img class="foto-perfil"  src="/images/usuarios/<%= info.user.image %>"  style= 'width: 20rem; height: 20rem; 'alt="Foto"></a>
+				<br>
+				<br>
+				<div class="alert alert-success" ><%= info.user.email %> </div>
+			</div>
+		</div>   
+        <br>    
+        <div style= 'text-align: center;'>
+            <a href="/editarPerfil"><button> EDITAR PERFIL</button></a>
+        </div>
+        <br>
+        <% if(info.vehiculos.length>0){ %>
+            <h2  style= 'text-align: left; padding-left: 10px;'> Tus autos publicados : </h2>
+            <% } %>  
+                            <section class="contenedor-productos">
+                                <% for(let i= 0; i < info.vehiculos.length; i++){ %>
+                                    
+                                    <div class="productos" >
+                                        <a href= "/detalle/<%=info.vehiculos[i].id%>">
+                                        <img src="\images\autos\<%=info.vehiculos[i].image_filename%>" style='height: 100%; width: 100%; object-fit: fill' > 
+                                        <h4 class="productos-titulo"><%= info.vehiculos[i].brands.brand %></h4>
+                                        <h4 class="productos-titulo"><%= info.vehiculos[i].categories.type_auto+" "+info.vehiculos[i].models.model %></h4>
+                                        <p class="productos-precio"><%= "$"+  new Intl.NumberFormat('de-DE').format(info.vehiculos[i].prices )  + "  "+info.vehiculos[i].stock +" "%><a href= "/editar/<%=info.vehiculos[i].id%>"><button>  Editar</button></a></p>
+                                    </div>
+                                    </a>
+                                <% } %>      
+                        </section>                      
+
+		</div>
+	    </div>
+        <%- include('../partials/footer')%>
+    </body>

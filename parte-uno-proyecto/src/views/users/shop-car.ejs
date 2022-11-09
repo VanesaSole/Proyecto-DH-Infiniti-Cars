@@ -1,0 +1,183 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <title>Shopping Car</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <link href="/css/styles+header.css" rel="stylesheet">
+    <link href="/css/styles+home.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e3500cfe31.js" crossorigin="anonymous"></script>
+
+    <link href="/css/styles+shopCar.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('../partials/header')%>
+
+    <section class="mt-5">
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table-youtube">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col" class="text-white">Producto</th>
+                            <th scope="col" class="text-white">Precio</th>
+                            <th scope="col" class="text-white">Cantidad</th>
+                            <th scope="col" class="text-white">Total</th>
+                            <th scope="col" class="text-white">Eliminar</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                <div class="main">
+                                    <div class="d-flex">
+
+                                        <a class="product-thumb" href="#">
+                                            <!-- w=145 h=98--> <img
+                                                src="\images\autos\EXTERIOR-frontSidePilotNear-1646321139201.jpeg"
+                                                style='height: 100%; width: 100%; object-fit: fill' alt="Product">
+                                        </a>
+
+                                    </div>
+                                    <div class="des">
+                                        <p> TOYOTA HILUX</p>
+                                        <P>AÑO 2017</P>
+                                        <P>217.000KM - Manual</P>
+
+                                    </div>
+
+                                </div>
+                            </td>
+                            <td>
+                                <h6>$650.000 <span>10% reserva</span></h6>
+
+                            </td>
+                            <td>
+                                <div class="counter">
+
+                                    <div class="count-input">
+                                        <select class="form-control">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>
+
+
+
+                                </div>
+
+                            </td>
+                            <td>
+
+                                <h6>$650.000</h6>
+                            </td>
+                            <td>
+                                <div class="buton-remove">
+
+                                    <a class="remove-from-cart" href="#">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </div>
+                            </td>
+
+                        </tr>
+                        <!-- end-->
+
+
+                        <tr>
+                            <td>
+                                <div class="main">
+                                    <div class="d-flex">
+
+                                        <a class="product-thumb" href="#">
+                                            <!-- w=145 h=98--> <img
+                                                src="\images\autos\EXTERIOR-frontSidePilotNear-1646321139201.jpeg"
+                                                alt="Product">
+                                        </a>
+
+                                    </div>
+                                    <div class="des">
+                                        <p> TOYOTA HILUX </p>
+                                        <P>AÑO 2017</P>
+                                        <P>217.000KM - Manual</P>
+
+                                    </div>
+
+                                </div>
+                            </td>
+                            <td>
+                                <h6>$650.000 <span>10% reserva</span></h6>
+
+                            </td>
+                            <td>
+                                <div class="counter">
+
+                                    <div class="count-input">
+                                        <select class="form-control">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>
+
+
+
+                                </div>
+
+                            </td>
+                            <td>
+
+                                <h6>$650.000</h6>
+                            </td>
+                            <td>
+                                <div class="buton-remove">
+
+                                    <a class="remove-from-cart" href="#">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </div>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+
+
+                </table>
+
+            </div>
+
+    </section>
+
+    <div class="col-lg-4 offset-lg-4">
+
+        <div class="checkout ">
+
+            <ul>
+                <li class="Subtotal">Subtotal
+                    <span>$1.300.000</span>
+                </li>
+                <li class="cart-total">Total
+                    <span>$1.300.000</span>
+                </li>
+
+            </ul>
+            <a href="#" class="proceed-btn">Finalizar compra</a>
+
+        </div>
+
+    </div>
+
+    <%- include('../partials/footer')%>
+        </div>

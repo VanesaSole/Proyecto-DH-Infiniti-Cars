@@ -1,0 +1,45 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        <title>Infinity Cars -Autos nuevos </title>
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <meta name="viewport" content="width=device-width">
+        <meta charset="utf-8">
+        <link href="/css/styles+header.css" rel="stylesheet">
+        <link href="/css/styles+home.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/e3500cfe31.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <link rel="icon" type="image/png" href="favicon.jpg"/>
+        <%- include('../partials/header')%>
+
+        <header>
+            <a href="https://youtu.be/dQw4w9WgXcQ?t=85" ><h2  class="texto">Porque comprar en INFINITI es garantia de confianza</h2>
+            <div><img src="/images/bmw.jpg" class="foto1"></div> </a>
+            <h2 class="texto2">Obtené tu auto con descuentos exclusivos</h2>
+            <div><img src="/images/varios.jpg" class="foto2"></div>
+            <h2 class="texto">Autos mas vistos</h2>
+            <section class="productoss">
+                <% for(let i= 0; i < 3; i++){ %>
+                    <div class="ofertas"> 
+                        <a href= "/detalle/<%=vehiculos[i].id%>">
+                        <article class="precio-descuento-descripcion">
+                            <div> 
+                            <img src="\images\autos\<%=vehiculos[i].image_filename%>" class="imagen"   > 
+                            </div>
+                            <div class="des" >
+                                <br>
+                                <br>  
+                            <h4 class="productos-titulo"><%= vehiculos[i].brands.brand +" "+ vehiculos[i].models.model+" "+ vehiculos[i].categories.type_auto%></h4>
+                            <p class="productos-precio"><%= vehiculos[i].years.year +" "+vehiculos[i].km_intervals.intervals +" km "+ vehiculos[i].transmission + " "+vehiculos[i].conditions %></p>
+                            <p class="productos-precio"><%="Precio : $"+   new Intl.NumberFormat('de-DE').format(vehiculos[i].prices ) %></p>
+                            </div>
+                        </article>
+                        </a>                       
+                    </div>
+                <% } %> 
+            </section>
+        </header>
+        
+        <%- include('../partials/footer')%>
+    </body>

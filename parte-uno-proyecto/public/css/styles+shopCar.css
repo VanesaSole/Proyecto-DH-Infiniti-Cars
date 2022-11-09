@@ -1,0 +1,376 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+
+}
+body{
+    background-color: #cacaca;
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke;
+}
+#busqueda{
+    display: flex;
+    background-color: #ccb23e;  
+    justify-content: center;
+    font-size: auto;
+    width: 100vw;
+    max-width: 100%;
+}
+
+
+.logo{
+    max-width: 100px;
+}
+
+
+
+
+
+
+
+
+
+.fa.fa-trash {
+   padding-left: 35px;
+   color:black;
+}
+
+
+
+
+.main .d-flex img{
+    max-width: 500px;
+    max-height: 500px;
+    object-fit: scale-down;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+section .table-youtube {
+    margin-bottom: 30px;
+    border: 3px solid #ccb23e;
+    margin-top: 20px;
+    margin-left: 30px;
+
+
+}
+
+section .table-youtube .thead-dark tr th {
+     border-bottom: 3px solid  #ccb23e;
+     
+}
+section .table-youtube thead tr th{
+    border-top: 0px;
+    font-size: 16px;
+    border-bottom: 0px;
+
+
+}
+
+section .table-youtube thead tr td {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    vertical-align: middle;
+    align-self: center;
+}
+
+section .table-youtube tbody tr td .main .d-flex {
+
+    padding-right: 30px;
+}
+section .table-youtube tbody tr td .main .d-flex img{
+    border: 2px solid gray !important;
+    border-radius: 3px;
+
+
+}
+section .table-youtube tbody tr td .main .des {
+
+    vertical-align: middle;
+    align-self: center;
+
+
+}
+section .table-youtube tbody tr td .main p {
+
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+section .table-youtube tbody tr td h6 {
+
+    font-size: 16px;
+    color:black;
+    margin-bottom: 0px;
+}
+
+section .table-youtube tbody tr td .counter {
+    margin-bottom: 0px;
+
+}
+.counter i {
+    border: 1px solid black;
+    padding: 7px;
+    display: inline-block;
+    position:relative;
+}
+
+section .table-youtube tbody tr td .counter input {
+
+    width: 100px;
+    padding-left: 30px;
+    height: 40px;
+    outline:none;
+    box-shadow: #ccb23e;
+
+}
+.checkout ul {
+
+    border: 2px solid black;
+    background:#ccb23e;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 16px;
+    padding-bottom: 20px;
+    width: 15vw;
+   
+
+
+
+
+}
+.checkout ul li{
+    list-style:none ;
+    font-size: 16px;
+    font-weight: bold;
+    color: whitesmoke;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    
+
+
+}
+.checkout {
+    padding-left: 43%;
+    margin-bottom: 30px;
+}
+
+.checkout ul li.subtotal {
+
+    font-weight: lighter;
+    text-transform: capitalize;
+    border-bottom: 1px solid white;
+    padding-bottom: 14px;
+}
+
+.checkout ul li.subtotal span {
+    font-weight: bold;
+
+
+}
+
+.checkout ul li.cart-total {
+    padding-top: 10px;
+    
+}
+
+.checkout ul li.cart-total span {
+    color:white;
+
+}
+
+.checkout ul li span{
+
+    float:right;
+
+
+}
+
+.checkout .proceed-btn {
+font-size: 15px;
+font-weight: bold;
+color: white;
+background: black;
+text-transform: uppercase;
+padding: 15px 25px 14 px 25 px;
+display: block;
+text-align: center;
+width: 47.4%;
+width: 15vw;
+
+}
+
+
+
+
+
+div.delete-button {
+    margin: 30px 20px;
+}
+    
+.table  #head {
+    color: white;
+    padding:12px;
+    
+   
+}
+.table .delete-button{
+    color: gold;
+    text-decoration: none;
+
+}
+.table #subtotal {
+    align-items: flex-end;
+
+
+}
+
+
+
+.menu{
+    background-color: #ccb23e;
+    color:#ffff;
+    padding: 8px 8px;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 14px;
+    margin: auto;
+}
+div a {
+    color: white;
+
+}  
+
+
+div.count-input {
+    padding-left: 50px;
+}
+
+select.form-control {
+    padding-right: 38px;
+    background-position: center right 17px;
+    background-repeat: no-repeat;
+    background-size: 9px 9px;
+}
+.form-control:not(textarea) {
+    height: 44px;
+}
+.form-control {
+    padding: 0 18px 3px;
+    border: 1px solid #dbe2e8;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #606975;
+    font-family: "roboto",sans-serif;
+    font-size: 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.shopping-cart-footer a {
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+footer {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: black;
+    color: white;
+    width: 100%;
+    margin-top: auto;
+}
+
+footer p {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.table-footer td {
+    border-top: 2px solid black;
+    width: 100%;
+
+} 
+h6 {
+    padding-left: 35px;
+}
+
+@media (min-width: 769px) {
+
+    
+
+    
+
+    
+    
+  
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        padding: 2px;
+    }
+
+
+    .footer p {
+        width: 160px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+
+    footer .redes {
+        margin-top: 5px;
+    }
+
+    footer .logos {
+        margin-top: 5px;
+    }
+
+    footer .politicas {
+        margin-top: 10px;
+    } 
+}
+
+@media (min-width: 1280px) {
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    .footer p {
+        width: 160px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

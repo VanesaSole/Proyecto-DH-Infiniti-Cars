@@ -1,0 +1,99 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Detalle de articulo</title>
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <meta name="viewport" content="width=device-wid th">
+        <meta charset="utf-8">
+        <link href="/css/styles+header.css" rel="stylesheet">
+        <link href="/css/styles+detalle.css" rel="stylesheet">
+
+        <script src="https://kit.fontawesome.com/e3500cfe31.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <%- include('../partials/header')%>
+        <br>
+        <br>  
+        <h2 class="titulo" style="text-align:center; margin-left: 10%;margin-right: 10%;"><%= vehiculos.brands.brand + " "+vehiculos.models.model + " "+vehiculos.categories.type_auto + " "+vehiculos.colors.color %></h2>
+        <main>   
+            <div class="productos">
+                <div class="container">
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 5</div>
+                        <img src="\images\autos\<%=vehiculos.image_filename%>"  style="width:100%">
+                    </div>
+                
+                    <div class="mySlides">
+                        <div class="numbertext">2 / 5</div>
+                        <img src="\images\autos\<%=vehiculos.image_filename2%>"  style="width:100%">
+                    </div>
+                
+                    <div class="mySlides">
+                        <div class="numbertext">3 / 5</div>
+                        <img src="\images\autos\<%=vehiculos.image_filename3%>"  style="width:100%">
+                    </div>
+                
+                    <div class="mySlides">
+                        <div class="numbertext">4 / 5</div>
+                        <img src="\images\autos\<%=vehiculos.image_filename4%>"  style="width:100%">
+                    </div>
+                
+                    <div class="mySlides">
+                        <div class="numbertext">5 / 5</div>
+                        <img src="\images\autos\<%=vehiculos.image_filename5%>"  style="width:100%">
+                    </div>
+                
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                    <div class="caption-container">
+                        <p id="caption"></p>
+                    </div>
+                
+                    <div class="row">
+                        <div class="column">
+                            <img class="demo cursor" src="\images\autos\<%=vehiculos.image_filename%>" style="width:100%" onclick="currentSlide(1)" alt="Costado derecho">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="\images\autos\<%=vehiculos.image_filename2%>" style="width:100%" onclick="currentSlide(2)"
+                                alt="Costado izquierdo">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="\images\autos\<%=vehiculos.image_filename3%>" style="width:100%" onclick="currentSlide(3)"
+                                alt="Frente">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="\images\autos\<%=vehiculos.image_filename4%>" style="width:100%" onclick="currentSlide(4)"
+                                alt="Detras">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="\images\autos\<%=vehiculos.image_filename5%>" style="width:100%" onclick="currentSlide(5)"
+                                alt="Interior">
+                        </div>
+                    </div>
+                </div>
+                <div class="detalleProductos">
+                    <h2> Características </h2>
+                    <br>
+                    <p class="productos-detalles">Año: <%= vehiculos.years.year %></p>
+                    <p class="productos-detalles">Kilomentraje: <%= vehiculos.km_intervals.intervals %> kms</p>
+                    <p class="productos-detalles">Transmisión: <%= vehiculos.transmission %></p> 
+                    <p class="productos-detalles">Condicion: <%= vehiculos.conditions + " "+vehiculos.stock %></p>
+        
+                    <p class="productos-precio">Precio: <%= "$"+  new Intl.NumberFormat('de-DE').format(vehiculos.prices)%></p>
+                    <br>
+                    
+                    <form method="POST" action="/delete/<%=vehiculos.id%>?_method=DELETE" enctype="multipart/form-data" >
+                        <button class="productos-detalles" type="submit">ELIMINAR</button>    
+                    </form>
+                    </div>
+            </div>
+            
+        </main>  
+        <br>
+        <br>      
+        <%- include('../partials/footer')%>
+        <script src= "/js/detalleScript.js"></script>
+</body>
+</html>
+
